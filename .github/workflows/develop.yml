@@ -1,4 +1,4 @@
-name: test build deploy to production
+name: test build deploy to develop staging
 
 on:
    pull request: 
@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  test_build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,8 +18,8 @@ jobs:
       - run: npm run build
 
   deploy:
-    name: deploy to production
-    needs: test_build
+    name: deploy to develop stagin
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
