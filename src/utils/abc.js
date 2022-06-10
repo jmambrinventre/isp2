@@ -1,7 +1,7 @@
 function abc () {
 
-    return 2
+    return 2 
 
 };
  
-module.exports = abc
+module.exports = abc 
