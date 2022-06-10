@@ -10,7 +10,7 @@
 
 
 
-/.github/workflows/develop.yaml
+/.github/workflows/develop.yml
 
 # testing
 /coverage
