@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test_build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
 
   deploy:
     name: deploy to production
-    needs: test_build
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
