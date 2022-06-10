@@ -5,7 +5,6 @@
 /.pnp
 .pnp.js
 
-/.github/workflows/feature1.yml
 
 # testing
 /coverage
