@@ -17,7 +17,7 @@ jobs:
       - run: npm test 
       - run: npm run build
 
-  deploy:
+  deploy: 
     name: deploy to develop stagin
     needs: test 
     runs-on: ubuntu-latest
