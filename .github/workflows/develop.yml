@@ -1,7 +1,7 @@
 name: test build deploy to develop staging
 
 on:
-   pull request: 
+   pull: 
     branches: 
       - develop
 
