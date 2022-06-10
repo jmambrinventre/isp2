@@ -3,7 +3,7 @@ name: test build deploy to production
 on:
    push: 
     branches: 
-      - main
+      - prueba
 
 jobs:
   test_build:
@@ -26,7 +26,12 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+<<<<<<< HEAD:.github/workflows/integrate.yaml
           heroku_app_name: "prdu" #Must be unique in Heroku
           heroku_email: "jmambrinventre@gmail.com"
 
 
+=======
+          heroku_app_name: "p2is" #Must be unique in Heroku
+          heroku_email: "jmambrinventre@gmail.com"  
+>>>>>>> develop:.github/workflows/develop.yml
