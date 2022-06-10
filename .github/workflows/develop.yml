@@ -19,7 +19,7 @@ jobs:
 
   deploy:
     name: deploy to develop stagin
-    needs: test
+    needs: test 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
