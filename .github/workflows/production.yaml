@@ -1,4 +1,8 @@
+<<<<<<< HEAD:.github/workflows/production.yaml
 name: test build deploy to production
+=======
+name: test develop 
+>>>>>>> develop:.github/workflows/develop.yaml
 
 on:
    push: 
