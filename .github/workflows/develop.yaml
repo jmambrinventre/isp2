@@ -15,15 +15,3 @@ jobs:
           node-version: 16.15.0
       - run: npm i 
       - run: npm test 
-
-  deploy: 
-    name: deploy to develop staging
-    needs: test 
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "p2is" #Must be unique in Heroku
-          heroku_email: "jmambrinventre@gmail.com"
