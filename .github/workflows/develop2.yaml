@@ -1,4 +1,4 @@
-name: test build deploy to develop staging
+name: build deploy to develop staging
 
 on:
    push: 
