@@ -1,4 +1,4 @@
-name: test production
+name: deploy to production
 
 on:
    push: 
@@ -6,19 +6,14 @@ on:
       - main
 
 jobs:
-  test:
+  deploy: 
+    name: deploy to production
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16.15.0
-      - run: npm i 
-      - run: npm test
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "prdu" #Must be unique in Heroku
           heroku_email: "jmambrinventre@gmail.com"
-
-
-
