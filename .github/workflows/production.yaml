@@ -15,10 +15,6 @@ jobs:
           node-version: 16.15.0
       - run: npm i 
       - run: npm test
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "prdu" #Must be unique in Heroku
-          heroku_email: "jmambrinventre@gmail.com"
 
 
 
